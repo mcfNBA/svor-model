@@ -53,6 +53,15 @@
   .legend .red   { color: var(--red);     font-weight: 600; }
   .legend .blue  { color: var(--accent2); font-weight: 600; }
 
+  .formula-bar {
+    background: var(--surface2); border-top: 1px solid var(--border);
+    padding: 13px 32px; font-size: 12px; color: var(--text2);
+    line-height: 1.75; margin: 0 -32px;
+  }
+  .formula-bar .formula-label { color: var(--accent2); font-weight: 600; }
+  .formula-bar .formula-mono  { font-family: var(--mono); font-size: 11.5px; color: var(--text); }
+  .formula-bar .fval          { color: var(--accent); font-weight: 600; font-family: var(--mono); }
+
   .controls {
     padding: 14px 32px; background: var(--surface);
     border-bottom: 1px solid var(--border);
@@ -175,6 +184,11 @@
     <span class="blue"><strong>Higher xPTS</strong></span> = better shot diet — gets to higher-value locations (rim, open 3) rather than contested mid-range &nbsp;·&nbsp;
     <strong>Pos%ile</strong> = percentile rank within full player pool &nbsp;·&nbsp;
     <span class="red"><strong>Negative SVOR</strong></span> = below-average finishing on their looks, not necessarily a bad player
+  </div>
+  <div class="formula-bar">
+    <span class="formula-label">xPTS Formula</span> &nbsp;·&nbsp;
+    <span class="formula-mono">xPTS = (rim% &times; <span class="fval">0.581</span> &times; 2) + (mid% &times; <span class="fval">0.375</span> &times; 2) + (three% &times; <span class="fval">0.327</span> &times; 3)</span>
+    &nbsp;·&nbsp; Fixed fg% benchmarks: <span class="fval">58.1%</span> rim &nbsp;&middot;&nbsp; <span class="fval">37.5%</span> mid-range &nbsp;&middot;&nbsp; <span class="fval">32.7%</span> three &nbsp;&middot;&nbsp; weighted by shot distribution to produce expected points per attempt
   </div>
 </div>
 
